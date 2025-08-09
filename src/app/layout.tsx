@@ -1,15 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Outfit, Space_Grotesk } from "next/font/google";
+import FlashlightBackground from "@/components/flashlight-background";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+  weight: [
+    "300", // font-light
+    "400", // font-normal
+    "500", // font-medium
+    "600", // font-semibold
+    "700", // font-bold
+  ],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+  weight: [
+    "100", // font-thin
+    "200", // font-extralight
+    "300", // font-light
+    "400", // font-normal
+    "500", // font-medium
+    "600", // font-semibold
+    "700", // font-bold
+    "800", // font-extrabold
+    "900", // font-black
+  ],
 });
 
 export const metadata: Metadata = {
@@ -24,10 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`h-dvh bg-[url('/bg-gradient-2.png')] bg-cover bg-center bg-no-repeat bg-fixed ${spaceGrotesk.className} ${outfit.className}`}>
+        <FlashlightBackground>
+          {children}
+        </FlashlightBackground>
       </body>
     </html>
   );
