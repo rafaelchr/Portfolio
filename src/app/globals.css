@@ -3,6 +3,10 @@
   --font-space: 'Space Grotesk', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply antialiased;
 }
