@@ -2,7 +2,7 @@ import AppNavbar from "@/components/app-navbar";
 import AppFooter from "@/components/app-footer";
 import Image from "next/image";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="m-10">
       <AppNavbar />
@@ -23,8 +23,12 @@ const page = () => {
                 <h1 className="text-4xl grotesk font-bold tracking-wide text-blue-400">
                   I&apos;m Rafael Manurung
                 </h1>
-                <p className="text-slate-400 text-sm font-light">Fresh graduate in Informatics</p>
-                <p className="text-slate-400 text-sm font-light">Full-stack developer and graphic design enthusiast</p>
+                <p className="text-slate-400 text-sm font-light">
+                  Fresh graduate in Informatics
+                </p>
+                <p className="text-slate-400 text-sm font-light">
+                  Full-stack developer and graphic design enthusiast
+                </p>
               </div>
               <div className="mt-10">
                 <h1 className="grotesk font-bold tracking-wide text-xl">
@@ -50,7 +54,9 @@ const page = () => {
                 <ul className="border-l-5 border-blue-400 flex flex-col gap-3 mt-5 pl-5">
                   <li>
                     <p>Bachelor of Computer Science in Informatics</p>
-                    <p className="text-slate-400 text-sm font-light">(GRADUATED CUM LAUDE 2025)</p>
+                    <p className="text-slate-400 text-sm font-light">
+                      (GRADUATED CUM LAUDE 2025)
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -72,7 +78,12 @@ const page = () => {
                   LANGUAGE PROFICIENCY
                 </h1>
                 <p className="mt-5">
-                  Native fluency in <span className="font-bold tracking-wide mx-1">BAHASA INDONESIA</span>. Limited working proficiency in <span className="font-bold tracking-wide mx-1">ENGLISH</span>
+                  Native fluency in{" "}
+                  <span className="font-bold tracking-wide mx-1">
+                    BAHASA INDONESIA
+                  </span>
+                  . Limited working proficiency in{" "}
+                  <span className="font-bold tracking-wide mx-1">ENGLISH</span>
                 </p>
               </div>
             </div>
@@ -84,4 +95,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

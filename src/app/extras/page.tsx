@@ -1,8 +1,18 @@
 import AppNavbar from "@/components/app-navbar";
 import AppFooter from "@/components/app-footer";
 import Image from "next/image";
+import { extrasImages } from "@/data/ExtrasImages";
 
-const page = () => {
+function shuffleArray<T>(array: T[]) {
+  return array
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
+
+const Page = () => {
+  const shuffledImages = shuffleArray(extrasImages);
+
   return (
     <div className="m-10">
       <AppNavbar />
@@ -16,12 +26,12 @@ const page = () => {
             <h1 className="text-7xl w-3/4 mt-4 tracking-tighter text-white capitalize">
               an art gallery could never be as unique as you
             </h1>
-            <hr className="mt-20" />
-            <div className="mt-10 w-full grid grid-cols-5">
-              {Array.from({ length: 20 }).map((_, i) => (
+            {/* <hr className="mt-20" /> */}
+            <div className="mt-20 w-full grid grid-cols-5 gap-2 bg-slate-600/30 backdrop-blur-sm py-20 px-2">
+              {shuffledImages.map((img, i) => (
                 <div key={i} className="relative bg-amber-300 h-85">
                   <Image
-                    src={i % 2 === 0 ? "/twirl.png" : "/bg-gradient.jpg"}
+                    src={img}
                     fill
                     alt={`photo-${i}`}
                     className="object-cover"
@@ -37,4 +47,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
