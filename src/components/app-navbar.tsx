@@ -22,10 +22,12 @@ const AppNavbar = () => {
 
           <ul className="flex gap-20 py-4 rounded-sm tracking-tight">
             <li>
-              <Link href={"/about"}>About Me</Link>
+              <Link href={"/#career-journey"} scroll={true}>
+                Career Journey
+              </Link>
             </li>
             <li>
-              <Link href={"/#career-journey"} scroll>Career Journey</Link>
+              <Link href={"/about"}>About Me</Link>
             </li>
             <li
               className="cursor-pointer"

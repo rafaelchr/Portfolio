@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import AppNavbar from "@/components/app-navbar";
 import AppHero from "@/components/app-hero";
 import CareerJourney from "@/components/career-journey";
