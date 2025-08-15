@@ -5,7 +5,7 @@ const AppFooter = () => {
     <div className="flex justify-center">
       <div className="outfit text-white py-4 mt-40 pb-20 tracking-tight text-sm w-full max-w-[1600px]">
         <hr className="mb-20" />
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid md:grid-cols-4 gap-2">
           <div className="col-end-5 flex flex-col gap-7">
             <div>
               <div>Create with NextJs in 20w5</div>

@@ -5,7 +5,7 @@ import AppFooter from "@/components/app-footer";
 
 export default function Home() {
   return (
-    <div className="m-10">
+    <div className="m-6 xl:m-10">
       <AppNavbar />
       <AppHero />
       <CareerJourney />

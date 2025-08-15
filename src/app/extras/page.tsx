@@ -14,7 +14,7 @@ const Page = () => {
   const shuffledImages = shuffleArray(extrasImages);
 
   return (
-    <div className="m-10">
+    <div className="m-6 xl:m-10">
       <AppNavbar />
       <div className="flex justify-center">
         <div className="outfit tracking-tight text-white w-full max-w-[1600px]">
@@ -23,13 +23,12 @@ const Page = () => {
               This is a collection of digital works (gallery) I’ve created
               during my free time. Enjoy!
             </div>
-            <h1 className="text-7xl w-3/4 mt-4 tracking-tighter text-white capitalize">
+            <h1 className="text-5xl md:text-7xl w-3/4 mt-4 tracking-tighter text-white capitalize">
               an art gallery could never be as unique as you
             </h1>
-            {/* <hr className="mt-20" /> */}
-            <div className="mt-20 w-full grid grid-cols-5 gap-2 bg-slate-600/30 backdrop-blur-sm py-20 px-2">
+            <div className="mt-10 w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 bg-slate-600/30 backdrop-blur-sm py-20 px-2">
               {shuffledImages.map((img, i) => (
-                <div key={i} className="relative bg-amber-300 h-85">
+                <div key={i} className="relative bg-amber-300 h-60 md:h-70 lg:h-85">
                   <Image
                     src={img}
                     fill

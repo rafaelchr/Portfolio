@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const Page = () => {
   return (
-    <div className="m-10">
+    <div className="m-6 xl:m-10">
       <AppNavbar />
       <div className="flex justify-center">
         <div className="outfit tracking-tight text-white w-full max-w-[1600px]">
-          <div className="flex gap-10 mt-20">
+          <div className="flex flex-col lg:flex-row gap-10 mt-20">
             <div className="w-full">
               <Image
-                src="/twirl.png"
+                src="/profile_web.png"
                 width={1600}
                 height={900}
                 alt="profile-picture"

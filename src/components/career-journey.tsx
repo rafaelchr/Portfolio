@@ -7,16 +7,17 @@ const CareerJourney = () => {
     <div id="career-journey" className="flex justify-center">
       <div className="outfit text-white mt-15 tracking-tight max-w-[1600px] w-full">
         <div>Career Journey</div>
-        <div className="grid grid-cols-4 gap-8 mt-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mt-5">
           {careerJourneyData.map((card, index) => (
             <Link key={index} href={`/detail/${index}`}>
-              <div className="max-w-sm overflow-hidden shadow-lg bg-slate-600/30 backdrop-blur-sm">
-                <div className="relative h-60">
+              <div className="w-full h-full overflow-hidden shadow-lg bg-slate-600/30 backdrop-blur-sm flex flex-col">
+                <div className="">
                   <Image
                     src={card.image}
-                    fill
+                    width={1600}
+                    height={900}
                     alt="Gradient background"
-                    className="w-full h-60 object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-3">
@@ -26,7 +27,6 @@ const CareerJourney = () => {
                   <h3 className="font-light tracking-wide">{card.title}</h3>
                 </div>
               </div>
-              
             </Link>
           ))}
         </div>
