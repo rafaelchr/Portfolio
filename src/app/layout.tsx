@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-dvh bg-[url('/background-test.png')] bg-cover bg-center bg-no-repeat bg-fixed ${spaceGrotesk.className} ${outfit.className}`}>
+      <body className={`min-h-screen bg-[url('/background-test.png')] bg-cover bg-center bg-no-repeat bg-fixed ${spaceGrotesk.className} ${outfit.className}`}>
         <FlashlightBackground>
           {children}
         </FlashlightBackground>
