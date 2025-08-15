@@ -27,7 +27,7 @@ const Page = () => {
               <p className="w-full md:w-3/4 mt-4">
                 {Item.desc}
               </p>
-              <div className="w-full mt-4 flex gap-10 font-light text-sm">
+              <div className="w-full mt-4 flex gap-2 sm:gap-10 font-light text-sm">
                 <div>
                   <p className="text-gray-400 font-medium">Type</p>
                   <p className="font-medium">{Item.category}</p>
