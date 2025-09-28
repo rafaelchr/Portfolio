@@ -11,7 +11,7 @@ const ModalNavbar: React.FC<ModalContactProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="outfit fixed top-0 left-0 w-full h-dvh bg-slate-600/60 backdrop-blur-sm z-50 text-white p-10">
+    <div className="outfit fixed top-0 left-0 w-full h-dvh bg-slate-600/60 backdrop-blur-sm z-50 text-white p-6 pt-10">
       <div className="flex justify-between">
         <div className="font-bold grotesk text-2xl">Navigation</div>
         <div onClick={onClose} className="cursor-pointer grotesk text-xl">
